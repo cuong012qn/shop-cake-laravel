@@ -38,6 +38,9 @@ Route::post('/admin/add-product', 'AdminController@postAddProduct');
 
 Route::get('/admin/users', 'AdminController@getUsers');
 
+//Customer
+Route::get('/customer','CustomerController@getCustomers');
+
 
 
 
