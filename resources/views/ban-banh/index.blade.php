@@ -19,7 +19,7 @@
 						<div class="col-sm-3">
 							<div class="single-item">
 								<div class="single-item-header">
-									<a href="/product/{{$value->id}}"><img src="image/product/{{$value->image}}" alt=""></a>
+									<a href="/product/{{$value->id}}"><img src="image/product/{{$value->image}}" alt="" style="height: 270px; width: 300px"></a>
 								</div>
 								<div class="single-item-body">
 									<p class="single-item-title">{{$value->name}}</p>
@@ -33,8 +33,8 @@
 									<div class="clearfix"></div>
 								</div>
 							</div>
-						</div>	
-						@endforeach						
+						</div>
+						@endforeach
 					</div>
 				</div> <!-- .beta-products-list -->
 
@@ -47,11 +47,11 @@
 						<div class="clearfix"></div>
 					</div>
 					<div class="row">
-						@foreach($all_products as $key => $value)								
+						@foreach($all_products as $key => $value)
 						<div class="col-sm-3">
 							<div class="single-item">
 								<div class="single-item-header">
-									<a href="/product/{{$value->id}}"><img src="image/product/{{$value->image}}" alt=""></a>
+									<a href="/product/{{$value->id}}"><img src="image/product/{{$value->image}}" alt="" style="height: 270px; width: 300px"></a>
 								</div>
 								<div class="single-item-body">
 									<p class="single-item-title">{{$value->name}}</p>
@@ -65,10 +65,10 @@
 									<div class="clearfix"></div>
 								</div>
 							</div>
-						</div>	
-						@endforeach									
+						</div>
+						@endforeach
 					</div>
-					<div class="space40">&nbsp;</div>					
+					<div class="space40">&nbsp;</div>
 				</div> <!-- .beta-products-list -->
 			</div>
 		</div> <!-- end section with sidebar and main content -->

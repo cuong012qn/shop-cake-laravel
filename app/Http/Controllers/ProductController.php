@@ -4,10 +4,18 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Product;
+use App\Slide;
 use App\Type;
 
 class ProductController extends Controller
 {
+    public function __construct()
+    {
+        $slide = Slide::all();
+
+        return view()->share('slides', $slide);
+    }
+
     public function index(){
     	$new_products = Product::where('new',1)
     	->orderBy('created_at','desc')
@@ -20,6 +28,12 @@ class ProductController extends Controller
             'all_products' => $all_products,
     	));
     }
+
+    public function getSlide()
+    {
+
+    }
+
 
     public function getProducts($id_type){
     	//get all products from products table
