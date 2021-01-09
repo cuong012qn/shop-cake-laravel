@@ -123,22 +123,25 @@
 				</nav>
 			</div> <!-- .container -->
 		</div> <!-- .header-bottom -->
-	</div> <!-- #header -->
+    </div> <!-- #header -->
+    @if (isset($slides))
 	<div class="rev-slider">
 		<div class="fullwidthbanner-container">
 			<div class="fullwidthbanner">
 				<div class="bannercontainer" >
 			    <div class="banner" >
 						<ul>
-                        @foreach ($slides as $key => $item)
-                        <li data-transition="boxfade" data-slotamount="20" class="active-revslide current-sr-slide-visible" style="width: 100%; height: 100%; overflow: hidden; visibility: inherit; opacity: 1; z-index: 20;">
-				            <div class="slotholder" style="width:100%;height:100%;" data-duration="undefined" data-zoomstart="undefined" data-zoomend="undefined" data-rotationstart="undefined" data-rotationend="undefined" data-ease="undefined" data-bgpositionend="undefined" data-bgposition="undefined" data-kenburns="undefined" data-easeme="undefined" data-bgfit="undefined" data-bgfitend="undefined" data-owidth="undefined" data-oheight="undefined">
-											<div class="tp-bgimg defaultimg" data-lazyload="undefined" data-bgfit="cover" data-bgposition="center center" data-bgrepeat="no-repeat" data-lazydone="undefined" src="image/slide/{{$item->image}}" data-src="image/slide/{{$item->image}}" style="background-color: rgba(0, 0, 0, 0); background-repeat: no-repeat; background-image: url('image/slide/{{$item->image}}'); background-size: cover; background-position: center center; width: 100%; height: 100%; opacity: 1; visibility: inherit;">
-										</div>
-									</div>
 
-                        </li>
-                        @endforeach
+                            @foreach ($slides as $key => $item)
+                            <li data-transition="boxfade" data-slotamount="20" class="active-revslide current-sr-slide-visible" style="width: 100%; height: 100%; overflow: hidden; visibility: inherit; opacity: 1; z-index: 20;">
+                                <div class="slotholder" style="width:100%;height:100%;" data-duration="undefined" data-zoomstart="undefined" data-zoomend="undefined" data-rotationstart="undefined" data-rotationend="undefined" data-ease="undefined" data-bgpositionend="undefined" data-bgposition="undefined" data-kenburns="undefined" data-easeme="undefined" data-bgfit="undefined" data-bgfitend="undefined" data-owidth="undefined" data-oheight="undefined">
+                                                <div class="tp-bgimg defaultimg" data-lazyload="undefined" data-bgfit="cover" data-bgposition="center center" data-bgrepeat="no-repeat" data-lazydone="undefined" src="image/slide/{{$item->image}}" data-src="image/slide/{{$item->image}}" style="background-color: rgba(0, 0, 0, 0); background-repeat: no-repeat; background-image: url('image/slide/{{$item->image}}'); background-size: cover; background-position: center center; width: 100%; height: 100%; opacity: 1; visibility: inherit;">
+                                            </div>
+                                        </div>
+
+                            </li>
+                            @endforeach
+
 						</ul>
 					</div>
 				</div>
@@ -146,7 +149,8 @@
 				<div class="tp-bannertimer"></div>
 			</div>
 		</div>
-		<!--slider-->
+        <!--slider-->
+        @endif
 	</div>
 
 	<div class="container">
